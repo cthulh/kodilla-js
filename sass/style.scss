@@ -4,6 +4,12 @@
 
 body { font-family: sans-serif; }
 
+@mixin background-image-cover($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center center;
+}
+
 .main-carousel {
   background: #EEE;
   width: 100%;
@@ -16,4 +22,71 @@ body { font-family: sans-serif; }
   margin-right: 10px;
   background: #8C8;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:nth-child(1) {
+    @include background-image-cover("https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(2) {
+    @include background-image-cover("https://images.pexels.com/photos/119564/pexels-photo-119564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(3) {
+    @include background-image-cover("https://images.pexels.com/photos/671658/pexels-photo-671658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(4) {
+    @include background-image-cover("https://images.pexels.com/photos/355241/pexels-photo-355241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(5) {
+    @include background-image-cover("https://images.pexels.com/photos/6718/mountains-clouds-forest-trees.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(6) {
+    @include background-image-cover("https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(7) {
+    @include background-image-cover("https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(8) {
+    @include background-image-cover("https://images.pexels.com/photos/7640/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(9) {
+    @include background-image-cover("https://images.pexels.com/photos/15382/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(10) {
+    @include background-image-cover("https://images.pexels.com/photos/414459/pexels-photo-414459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(11) {
+    @include background-image-cover("https://images.pexels.com/photos/629159/pexels-photo-629159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  &:nth-child(12) {
+    @include background-image-cover("https://images.pexels.com/photos/371649/pexels-photo-371649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+}
+
+.main-container{
+
+  .container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex: 1;
+    p {
+      padding: 2em;
+      background-color: rgba(black, 0.5);
+      color: white;
+      flex: 1;
+      text-align: center;
+      max-width: 600px;
+      border-radius: 5px;
+    }
+  }
 }
