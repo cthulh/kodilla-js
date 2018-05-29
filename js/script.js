@@ -28,4 +28,13 @@
     progressBar.style.width = progress * 100 + '%';
   });
 
+  //restart button resets to slide of index 0
+  var restartBtns = document.querySelectorAll(".restart-button");
+  restartBtns.forEach(function(btn){
+    console.log(btn);
+    btn.onclick = function(){
+      flkty.select(0);
+      console.log("Reset!");
+    };
+  });
 }());

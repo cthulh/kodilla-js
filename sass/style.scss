@@ -115,6 +115,19 @@ body { font-family: sans-serif; }
   background: #00468C;
 }
 
+.restart-button {
+  position: absolute;
+  top: 0.8em;
+  right: 1em;
+  padding: 0.5em;
+  font-size: 0.8em;
+  background: rgba(black, 0.5);
+  color: #EEE;
+  border-radius: 50%;
+  border: none;
+}
+
+
 @media screen and ( max-width: 1000px ) {
   .carousel-cell { width: 70%; }
   .main-container{
