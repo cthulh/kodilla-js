@@ -17,8 +17,15 @@
     cellElement.classList.add('is-selected');
     // select clicked cell
     if ( typeof cellIndex == 'number' ) {
-      flkty.selectCell( cellIndex );
+      flkty.select( cellIndex );
     }
+  });
+
+  //progress bar
+  var progressBar = document.querySelector('.progress-bar');
+  flkty.on( 'scroll', function( progress ) {
+    progress = Math.max( 0, Math.min( 1, progress ) );
+    progressBar.style.width = progress * 100 + '%';
   });
 
 }());
