@@ -3,7 +3,8 @@
   var flkty = new Flickity('.main-carousel', {
     cellAlign: 'center',
     contain: true,
-    autoPlay: true
+    autoPlay: true,
+    hash: true
   });
 
   // on click select that slide
