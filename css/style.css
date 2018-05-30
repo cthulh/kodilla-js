@@ -7,12 +7,19 @@ body {
   font-family: sans-serif;
 }
 
-.main-carousel {
+.main-container .progress-bar {
+  height: 20px;
+  width: 0;
+  background: #00468C;
+}
+
+.main-container .main-carousel {
   background: #EEE;
   width: 100%;
 }
 
-.carousel-cell {
+.main-container .main-carousel .carousel-cell {
+  overflow: hidden;
   opacity: 0.5;
   width: 60%;
   height: 50%;
@@ -28,100 +35,106 @@ body {
       align-items: center;
 }
 
-.carousel-cell.is-selected {
+.main-container .main-carousel .carousel-cell.is-selected {
   opacity: 1;
 }
 
-.carousel-cell:nth-child(1) {
-  background-image: url("https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(1) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(2) {
-  background-image: url("https://images.pexels.com/photos/119564/pexels-photo-119564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(2) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(3) {
-  background-image: url("https://images.pexels.com/photos/671658/pexels-photo-671658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(3) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(4) {
-  background-image: url("https://images.pexels.com/photos/355241/pexels-photo-355241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(4) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(5) {
-  background-image: url("https://images.pexels.com/photos/6718/mountains-clouds-forest-trees.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(5) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(6) {
-  background-image: url("https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(6) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(7) {
-  background-image: url("https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(7) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(8) {
-  background-image: url("https://images.pexels.com/photos/7640/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(8) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(9) {
-  background-image: url("https://images.pexels.com/photos/15382/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(9) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(10) {
-  background-image: url("https://images.pexels.com/photos/414459/pexels-photo-414459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(10) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(11) {
-  background-image: url("https://images.pexels.com/photos/629159/pexels-photo-629159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(11) {
   background-size: cover;
   background-position: center center;
 }
 
-.carousel-cell:nth-child(12) {
-  background-image: url("https://images.pexels.com/photos/371649/pexels-photo-371649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+.main-container .main-carousel .carousel-cell:nth-child(12) {
   background-size: cover;
   background-position: center center;
 }
 
-.main-container .container {
+.main-container .main-carousel .carousel-cell img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container .main-carousel .carousel-cell .container {
+  position: absolute;
+  top: 0;
+  height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   max-width: 1200px;
   -ms-flex: 1;
       flex: 1;
 }
 
-.main-container .container p {
-  padding: 2em;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #EEE;
+.main-container .main-carousel .carousel-cell .container h3 {
   -ms-flex: 1;
       flex: 1;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-container .main-carousel .carousel-cell .container p {
+  padding: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #EEE;
+  -ms-flex: 3;
+      flex: 3;
   text-align: center;
   max-width: 600px;
   border-radius: 5px;
@@ -140,12 +153,6 @@ body {
   border-radius: 0;
 }
 */
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background: #00468C;
-}
-
 .restart-button {
   position: absolute;
   top: 0.8em;
