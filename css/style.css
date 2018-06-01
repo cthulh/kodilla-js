@@ -165,6 +165,11 @@ body {
   border: none;
 }
 
+#map {
+  height: 40vh;
+  width: 100%;
+}
+
 @media screen and (max-width: 1000px) {
   .carousel-cell {
     width: 70%;
