@@ -93,13 +93,9 @@
 
   // template
   var tempSlide = document.getElementById("slide").innerHTML;
-  console.log(tempSlide);
   Mustache.parse(tempSlide);
-  console.log(tempSlide);
   var slides = Mustache.render(tempSlide, {data});
-  console.log(slides);
   var carousel = document.querySelector(".main-carousel");
-  console.log(carousel);
   carousel.insertAdjacentHTML("beforeend", slides);
 
   // -------------------- flickity
@@ -134,10 +130,8 @@
   //restart button resets to slide of index 0
   var restartBtns = document.querySelectorAll(".restart-button");
   restartBtns.forEach(function(btn){
-    console.log(btn);
     btn.onclick = function(){
       flkty.select(0);
-      console.log("Reset!");
     };
   });
 
