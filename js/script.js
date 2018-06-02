@@ -103,6 +103,11 @@
     }
   ]
 
+  // Default
+  var params = {
+    clickedMarker: false
+  }
+
   // template
   var tempSlide = document.getElementById("slide").innerHTML;
   Mustache.parse(tempSlide);
@@ -134,7 +139,14 @@
 
   // on slide change load google maps position
   flkty.on( 'change', function( index ) {
-    initMap(data[index + 1].coords);
+    console.log('Marker was clicked? ' + params.clickedMarker);
+    if (!params.clickedMarker) {
+      flkty.map.setCenter(data[index].coords);
+      flkty.map.setZoom(8);
+    } else {
+      params.clickedMarker = false;
+      console.log('Clicked marker was reset to: ' + params.clickedMarker);
+    }
   });
 
   //progress bar
@@ -153,16 +165,19 @@
   });
 
   // Initialize and add the map
-  window.initMap = function(coords, zoom) {
-    // default coords = 1st slide
-    if (!coords) {coords = data[0].coords}
-    // default zoom
-    if (!zoom) {zoom = 9}
+  window.initMap = function() {
     // The map, centered
-    var map = new google.maps.Map(document.getElementById('map'), {zoom: zoom, center: coords});
+    var map = new google.maps.Map(document.getElementById('map'), {zoom: 8, center: data[0].coords});
+    flkty.map = map;
     // Load markers
     data.forEach(function(el){
       var marker = new google.maps.Marker({position: el.coords, map: map});
+      var goToIndex = el.id - 1;
+      marker.addListener('click', function () {
+        // marker activates slide
+        params.clickedMarker = true;
+        flkty.select(goToIndex);
+      });
     });
   }
 
